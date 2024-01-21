@@ -4,10 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Local File Transfer</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #fileInput {
+      display: none;
+    }
+
+    .file-input-label {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #uploadButton {
+      background-color: #008CBA;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <input type="file" id="fileInput">
-  <button onclick="uploadFile()">Upload</button>
+  <h1>Local File Transfer</h1>
+  <label for="fileInput" class="file-input-label">Choose File</label>
+  <input type="file" id="fileInput" style="display:none">
+  <button onclick="uploadFile()" id="uploadButton">Upload</button>
+  <div id="status"></div>
   <script src="script.js"></script>
 </body>
 </html>
